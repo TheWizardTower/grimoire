@@ -1,3 +1,5 @@
+module ButLast where
+
 getButLast :: [a] -> a
 getButLast []       = error "Cannot call getButLast on empty array."
 getButLast [x]      = error "Cannot call getButLast on array with one element."
