@@ -6,3 +6,5 @@ dependencies:
   override:
      - ghc *.hs:
          pwd: 99problems-haskell/01-10/
+     - ghc *.hs:
+         pwd: 99problems-haskell/11-20/
