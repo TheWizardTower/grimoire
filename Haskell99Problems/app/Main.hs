@@ -1,7 +1,11 @@
+{-# LANGUAGE ScopedTypeVariables #-}
+{-# LANGUAGE TemplateHaskell     #-}
 module Main where
 
-import Haskell99Problems
-import Test.QuickCheck
+-- import Haskell99Problems
+import           Test.QuickCheck
+import           Test.QuickCheck.All
 
-main :: IO ()
-main = quickCheckAll
+return []
+
+main = $(quickCheckAll)
