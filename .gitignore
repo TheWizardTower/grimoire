@@ -15,6 +15,7 @@ fish_history
 
 # Ignore lock files from editors.
 \#*#
+.\#*
 
 # Ignore emacs/vim swap files.
 *~
@@ -28,3 +29,24 @@ emacs.d/session.*
 emacs.d/.emacs.desktop
 emacs.d/elpa/*
 emacs.d/auto-save-list/*
+
+# Created by https://www.gitignore.io/api/haskell
+
+### Haskell ###
+dist
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+.stack-work/
+
