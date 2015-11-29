@@ -1,11 +1,11 @@
-module EncodeModified where
+module P13_EncodeDirect where
 
 data ListItem a = Single a | Multiple Int a
   deriving (Show, Eq)
-encodeModified :: Eq a => [a] -> [ListItem a]
-encodeModified [] = error "Cannot call encodeModified on an empty list."
-encodeModified [x] = [Single x]
-encodeModified (x:xs) = encodeLetter xs 1 x
+encodeDirect :: Eq a => [a] -> [ListItem a]
+encodeDirect [] = error "Cannot call encodeDirect on an empty list."
+encodeDirect [x] = [Single x]
+encodeDirect (x:xs) = encodeLetter xs 1 x
 
 
 encodeLetter :: Eq a => [a] -> Int -> a -> [ListItem a]

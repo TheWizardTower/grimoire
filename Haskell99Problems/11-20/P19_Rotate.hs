@@ -1,4 +1,4 @@
-module Rotate where
+module P19_Rotate where
 
 rotate :: [a] -> Int -> [a]
 rotate [] _ = []

@@ -1,4 +1,4 @@
-module Split where
+module P17_Split where
 
 split :: [a] -> Int -> ([a], [a])
 split [] _ = error "Cannot split an empty list."

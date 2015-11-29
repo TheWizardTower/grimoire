@@ -1,4 +1,4 @@
-module Dupli where
+module P14_Dupli where
 
 dupli :: [a] -> [a]
 dupli [] = []

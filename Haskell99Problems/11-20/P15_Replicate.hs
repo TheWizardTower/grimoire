@@ -1,4 +1,4 @@
-module Repli where
+module P15_Replicate where
 
 repli :: [a] -> Int -> [a]
 repli [] _      = []

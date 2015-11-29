@@ -1,4 +1,4 @@
-module DropEvery where
+module P16_DropEvery where
 
 dropEvery :: [a] -> Int -> [a]
 dropEvery xs 0 = xs

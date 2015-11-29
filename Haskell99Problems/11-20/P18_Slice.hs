@@ -1,4 +1,4 @@
-module Slice where
+module P18_Slice where
 
 slice :: [a] -> Int -> Int -> [a]
 slice [] _ _ = error "Cannot slice an empty list."

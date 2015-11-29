@@ -1,4 +1,4 @@
-module Decode where
+module P12_Decode where
 
 data ListItem a = Single a | Multiple Int a
   deriving Show

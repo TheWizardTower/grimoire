@@ -1,4 +1,4 @@
-module RemoveAt where
+module P20_RemoveAt where
 
 removeAt :: Int -> [a] -> (a, [a])
 removeAt _      [] = error "Cannot remove element from empty list."
