@@ -1,4 +1,4 @@
-module GetLast where
+module P01_GetLast where
 getLast :: [a] -> a
 getLast []     = error "Cannot get last element of empty list."
 getLast [x]    = x

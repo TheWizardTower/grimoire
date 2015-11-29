@@ -1,4 +1,4 @@
-module MyReverse where
+module P05_MyReverse where
 
 myReverse :: [a] -> [a]
 myReverse []     = []

@@ -1,6 +1,6 @@
-module MyLength where
+module P04_MyLength where
 
-import Data.List
+import           Data.List
 
 myLength :: [a] -> Int
 myLength xs = myLengthAcc xs 0

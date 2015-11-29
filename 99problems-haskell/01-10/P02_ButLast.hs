@@ -1,4 +1,4 @@
-module ButLast where
+module P02_ButLast where
 
 getButLast :: [a] -> a
 getButLast []       = error "Cannot call getButLast on empty array."

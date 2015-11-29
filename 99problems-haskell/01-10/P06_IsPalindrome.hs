@@ -1,4 +1,4 @@
-module IsPalindrome where
+module P06_IsPalindrome where
 
 isPalindrome :: Eq a => [a] -> Bool
 isPalindrome []       = True
