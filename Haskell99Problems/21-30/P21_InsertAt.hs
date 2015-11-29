@@ -1,4 +1,4 @@
-module InsertAt where
+module P21_InsertAt where
 
 insertAt ::  a -> [a] -> Int -> [a]
 insertAt _ [] _      = error "Cannot remove element from empty list."
