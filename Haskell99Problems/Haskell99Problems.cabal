@@ -18,7 +18,25 @@ library
   exposed-modules:     P01_GetLast,
                        P02_ButLast,
                        P03_KthElement,
-                       P04_MyLength
+                       P04_MyLength,
+                       P05_MyReverse,
+                       P06_IsPalindrome,
+                       P07_Flatten,
+                       P08_Compress,
+                       P09_Pack,
+                       P10_Encode,
+                       P11_EncodeModified,
+                       P12_Decode,
+                       P13_EncodeDirect,
+                       P14_Dupli,
+                       P15_Replicate,
+                       P16_DropEvery,
+                       P17_Split,
+                       P18_Slice,
+                       P19_Rotate,
+                       P20_RemoveAt
+                       P21_InsertAt,
+                       P22_Range
   build-depends:       base >= 4.7 && < 5, QuickCheck
   default-language:    Haskell2010
 
