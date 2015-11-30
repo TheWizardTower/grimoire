@@ -20,6 +20,7 @@ library
                      , P02_ButLast
                      , P02_ButLast_Tests
                      , P03_KthElement
+                     , P03_KthElement_Tests
                      , P04_MyLength
                      , P05_MyReverse
                      , P05_MyReverse_Tests
