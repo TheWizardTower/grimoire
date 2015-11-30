@@ -22,6 +22,7 @@ library
                      , P03_KthElement
                      , P03_KthElement_Tests
                      , P04_MyLength
+                     , P04_MyLength_Tests
                      , P05_MyReverse
                      , P05_MyReverse_Tests
                      , P06_IsPalindrome
