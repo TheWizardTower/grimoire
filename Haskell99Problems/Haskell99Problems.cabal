@@ -21,6 +21,7 @@ library
                      , P03_KthElement
                      , P04_MyLength
                      , P05_MyReverse
+                     , P05_MyReverse_Tests
                      , P06_IsPalindrome
                      , P07_Flatten
                      , P08_Compress
@@ -40,6 +41,7 @@ library
                      , P22_Range
   build-depends:       base >= 4.7 && < 5
                      , QuickCheck
+                     , HUnit
   default-language:    Haskell2010
 
 executable Haskell99Problems-exe
@@ -49,6 +51,7 @@ executable Haskell99Problems-exe
   build-depends:       base
                      , Haskell99Problems
                      , QuickCheck
+                     , HUnit
   default-language:    Haskell2010
 
 test-suite Haskell99Problems-test
