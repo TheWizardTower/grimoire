@@ -10,4 +10,5 @@ ADD . /root/Haskell99Problems
 
 WORKDIR /root/Haskell99Problems
 
-RUN stack build
+RUN stack build && \
+    stack exec Haskell99Problems-exe
