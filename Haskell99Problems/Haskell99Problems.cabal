@@ -18,6 +18,7 @@ library
   exposed-modules:     P01_GetLast
                      , P01_GetLast_Tests
                      , P02_ButLast
+                     , P02_ButLast_Tests
                      , P03_KthElement
                      , P04_MyLength
                      , P05_MyReverse
