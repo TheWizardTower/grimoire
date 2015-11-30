@@ -1,12 +1,9 @@
 machine:
-  ghc:
-    version: 7.8.3
+  services:
+  - docker
 
-dependencies:
+test:
   override:
-     - ghc *.hs:
-         pwd: Haskell99Problems/01-10/
-     - ghc *.hs:
-         pwd: Haskell99Problems/11-20/
-     - ghc *.hs:
-         pwd: Haskell99Problems/21-30/
+     - docker info
+     - docker -t thewizardtower/Haskell99Problems .:
+         pwd: Haskell99Problems
