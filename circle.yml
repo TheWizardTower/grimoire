@@ -5,5 +5,5 @@ machine:
 test:
   override:
      - docker info
-     - docker build -t thewizardtower/Haskell99Problems .:
+     - docker build -t thewizardtower/haskell99problems .:
          pwd: Haskell99Problems
