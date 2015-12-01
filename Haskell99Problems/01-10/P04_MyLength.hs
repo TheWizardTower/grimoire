@@ -10,8 +10,6 @@ myLengthAcc :: [a] -> Int -> Int
 myLengthAcc [] acc     = acc
 myLengthAcc (x:xs) acc = myLengthAcc xs (acc + 1)
 
-myAcc :: (Num acc) => acc -> a -> acc
-myAcc !acc _ = acc + 1
-
-myAltLength :: (Num b, Foldable t) => t a -> b
-myAltLength = foldl' myAcc 0
+myAltLength :: [a] -> Int
+myAltLength [] = 0
+myAltLength (x:xs) = foldl' (\ !acc _ -> acc + 1) 0 (x:xs)
