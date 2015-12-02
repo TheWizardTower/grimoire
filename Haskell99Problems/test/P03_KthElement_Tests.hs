@@ -1,4 +1,4 @@
-module P03_KthElement_Tests where
+module P03_KthElement_Tests (kthElementSuite) where
 
 import           P03_KthElement
 import           Test.Tasty            (TestTree, testGroup)

@@ -1,4 +1,3 @@
-{-# LANGUAGE TemplateHaskell #-}
 module P02_ButLast_Tests where
 
 import           P02_ButLast

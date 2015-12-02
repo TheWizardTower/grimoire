@@ -4,7 +4,7 @@
 import           P01_GetLast_Tests
 import           P02_ButLast_Tests
 import           P03_KthElement_Tests
--- import           P04_MyLength_Tests
+import           P04_MyLength_Tests
 -- import           P05_MyReverse_Tests
 import           Test.Tasty
 import           Test.Tasty.HUnit
@@ -22,4 +22,5 @@ tests = testGroup "All Tests"
             [ getLastSuite
             , butLastSuite
             , kthElementSuite
+            , myLengthSuite
             ]
