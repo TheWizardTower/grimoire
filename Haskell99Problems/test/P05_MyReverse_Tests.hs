@@ -1,21 +1,18 @@
-{-# LANGUAGE TemplateHaskell #-}
 module P05_MyReverse_Tests where
 
 import           P05_MyReverse
-import           Test.HUnit
-import           Test.QuickCheck
+import           Test.Tasty            (TestTree, testGroup)
+import           Test.Tasty.HUnit
+import           Test.Tasty.QuickCheck
 
-test_nonEmpty = TestCase $ assertEqual "Reverse of one-element list. is the identity function." [1] (myReverse [1])
-test_threeElem = TestCase $ assertEqual "Reverse of [1,2,3] is [3,2,1]." [3,2,1] (myReverse [1,2,3])
-
-test_empty = TestCase $ assertEqual "Reverse of empty list is the empty list." ([] :: [Int]) (myReverse [])
-
-tests = TestList [TestLabel "" test_nonEmpty, TestLabel "" test_threeElem, TestLabel "" test_empty]
-
-prop_reverse :: [Int] -> Bool
-prop_reverse xs = xs == (myReverse (myReverse xs))
-
-return []
-runTests = do
-  $quickCheckAll
-  runTestTT tests
+myReverseSuite :: TestTree
+myReverseSuite = testGroup "myReverse"
+  [ testProperty "myReverse is equivalent to reverse." $
+    ((\xs -> (myReverse xs) == (reverse xs)) :: [Int] -> Bool)
+  , testProperty "(myReverse . myReverse xs) == xs" $
+    ((\xs -> (myReverse (myReverse xs)) == xs) :: [Int] -> Bool)
+  , testCase "Reverse of one-element list is the identity function." $
+    (myReverse [1]) @?= [1]
+  , testCase "Reverse of [1,2,3] is [3,2,1]."$
+    (myReverse [1,2,3]) @?= [3,2,1]
+  ]
