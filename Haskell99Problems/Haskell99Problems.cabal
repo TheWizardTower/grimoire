@@ -1,7 +1,7 @@
 name:                Haskell99Problems
 version:             0.1.0.0
 synopsis:            (Incomplete) Solution set to the 99 Problems in Haskell.
-description:         Please see README.md
+description:         Please see readme.org
 homepage:            http://github.com/githubuser/Haskell99Problems#readme
 license:             BSD3
 license-file:        LICENSE

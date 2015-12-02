@@ -1,0 +1,24 @@
+#+TITLE Haskell 99 Problems
+#+AUTHOR: Adam McCullough
+
+#+CAPTION: Build Status on Circle-CI
+#+ATTR_HTML: :alt grimoire.svg
+[[https://circleci.com/gh/TheWizardTower/dotfiles][https://circleci.com/gh/TheWizardTower/grimoire.svg?style=shield&circle-token:=circle-token]]
+
+* [[https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems][Haskell 99 Problems]]
+... but a null ain't one.
+
+This is my attempt to teach myself both Haskell and the surrounding toolchain. The eventual goal is to have a fully-tested thing I could theoretically submit to Hackage.
+
+* TODO
+** Finish the project.
+Namely, write solutions to all the problems in the set.
+** Test your solutions.
+Prove they work! And learn Haskell Testing in the process.
+** Document your solutions.
+Haddock looks cool. Learn how to use it.
+** Make more awful jokes.
+I'm sure this will happen without much added effort.
+
+* Feedback?
+Always appreciated. Send along if you think I've done something either awesome or horrifying.
