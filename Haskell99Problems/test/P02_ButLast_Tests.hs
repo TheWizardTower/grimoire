@@ -12,8 +12,8 @@ listOf2 gen = sized $ \n ->
   do k <- choose (2,2 `max` n)
      vectorOf k gen
 
-butLastTests :: TestTree
-butLastTests = testGroup "getButLast test suite."
+butLastSuite :: TestTree
+butLastSuite = testGroup "getButLast test suite."
   [ testProperty "butLast is equivalent to last . init." $
     forAll (listOf2 arbitrary) $ ((\s -> (getButLast s) == (last (init s))) :: [Int] -> Bool)
   , testCase "Second to last element in [1,2,3,4] is 3." $
