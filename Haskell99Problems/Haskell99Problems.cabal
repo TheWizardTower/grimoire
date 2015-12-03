@@ -62,6 +62,7 @@ test-suite Haskell99Problems-test
                      , P04_MyLength_Tests
                      , P05_MyReverse_Tests
                      , P06_IsPalindrome_Tests
+                     , P07_Flatten_Tests
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
                      , Haskell99Problems
