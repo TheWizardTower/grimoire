@@ -3,6 +3,7 @@ import           P02_ButLast_Tests
 import           P03_KthElement_Tests
 import           P04_MyLength_Tests
 import           P05_MyReverse_Tests
+import           P06_IsPalindrome_Tests
 import           Test.Tasty
 import           Test.Tasty.HUnit
 import           Test.Tasty.QuickCheck as QC
@@ -19,4 +20,5 @@ tests = testGroup "All Tests"
             , kthElementSuite
             , myLengthSuite
             , myReverseSuite
+            , isPalindromeSuite
             ]
