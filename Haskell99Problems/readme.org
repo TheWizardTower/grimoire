@@ -1,4 +1,4 @@
-#+TITLE Haskell 99 Problems
+#+TITLE: Haskell 99 Problems
 #+AUTHOR: Adam McCullough
 
 #+CAPTION: Build Status on Circle-CI
