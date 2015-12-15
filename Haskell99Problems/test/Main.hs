@@ -8,6 +8,7 @@ import           P07_Flatten_Tests
 import           P08_Compress_Tests
 import           P09_Pack_Tests
 import           P10_Encode_Tests
+import           P11_EncodeModified_Tests
 import           Test.Tasty
 import           Test.Tasty.HUnit
 import           Test.Tasty.QuickCheck as QC
@@ -29,4 +30,5 @@ tests = testGroup "All Tests"
             , compressSuite
             , packSuite
             , encodeSuite
+            , encodeModifiedSuite
             ]

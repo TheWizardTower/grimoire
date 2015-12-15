@@ -11,7 +11,7 @@ encodeModified (x:xs) = encodeLetter xs 1 x
 encodeLetter :: Eq a => [a] -> Int -> a -> [ListItem a]
 encodeLetter [] count a                = [makeListItem count a]
 encodeLetter [x] count a    | a == x   = encodeLetter [] (count + 1) a
-                            | a /= x   = makeListItem count a : encodeLetter [] 1 a
+                            | a /= x   = makeListItem count a : encodeLetter [] 1 x
 encodeLetter (x:xs) count a | a == x   = encodeLetter xs (count + 1) a
                             | a /= x   = makeListItem count a : encodeLetter xs 1 x
 
