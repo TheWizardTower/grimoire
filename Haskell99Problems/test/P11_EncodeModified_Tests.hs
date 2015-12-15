@@ -1,18 +1,13 @@
 module P11_EncodeModified_Tests (encodeModifiedSuite) where
 
-import P11_EncodeModified
-import Data.List
-import Test.Tasty
-import Test.Tasty.HUnit
-import Test.Tasty.QuickCheck
-
-stockEncode xs = map (\x -> (length x, head x)) (group xs)
-
-stockEncodeModified :: Eq a => [a] -> [ListItem a]
-stockEncodeModified = map encodeHelper . stockEncode
-    where
-      encodeHelper (1,x) = Single x
-      encodeHelper (n,x) = Multiple n x
+import           Data.List
+import           ListItem
+import           NestedList
+import           P11_EncodeModified
+import           Test.Tasty
+import           Test.Tasty.HUnit
+import           Test.Tasty.QuickCheck
+import           TestLib
 
 encodeModifiedSuite :: TestTree
 encodeModifiedSuite = testGroup "Encode Modified"

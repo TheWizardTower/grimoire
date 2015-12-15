@@ -1,4 +1,3 @@
-{-# LANGUAGE TemplateHaskell #-}
 module P01_GetLast_Tests (getLastSuite) where
 
 import           P01_GetLast

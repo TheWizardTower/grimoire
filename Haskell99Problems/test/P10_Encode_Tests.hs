@@ -1,12 +1,11 @@
 module P10_Encode_Tests (encodeSuite) where
 
-import P10_Encode
-import Data.List
-import Test.Tasty
-import Test.Tasty.HUnit
-import Test.Tasty.QuickCheck
-
-stockEncode xs = map (\x -> (length x, head x)) (group xs)
+import           Data.List
+import           P10_Encode
+import           Test.Tasty
+import           Test.Tasty.HUnit
+import           Test.Tasty.QuickCheck
+import           TestLib
 
 encodeSuite :: TestTree
 encodeSuite = testGroup "Encode"

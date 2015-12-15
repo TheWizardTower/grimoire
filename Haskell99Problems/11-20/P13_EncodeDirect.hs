@@ -1,7 +1,7 @@
 module P13_EncodeDirect where
 
-data ListItem a = Single a | Multiple Int a
-  deriving (Show, Eq)
+import           ListItem
+
 encodeDirect :: Eq a => [a] -> [ListItem a]
 encodeDirect [] = error "Cannot call encodeDirect on an empty list."
 encodeDirect [x] = [Single x]

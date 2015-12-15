@@ -4,12 +4,7 @@ import           P02_ButLast
 import           Test.Tasty            (TestTree, testGroup)
 import           Test.Tasty.HUnit
 import           Test.Tasty.QuickCheck
-
-
-listOf2 :: Gen a -> Gen [a]
-listOf2 gen = sized $ \n ->
-  do k <- choose (2,2 `max` n)
-     vectorOf k gen
+import           TestLib
 
 butLastSuite :: TestTree
 butLastSuite = testGroup "getButLast test suite."

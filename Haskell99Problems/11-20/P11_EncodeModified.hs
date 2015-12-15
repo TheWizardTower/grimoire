@@ -1,7 +1,7 @@
 module P11_EncodeModified where
 
-data ListItem a = Single a | Multiple Int a
-  deriving (Show, Eq)
+import           ListItem
+
 encodeModified :: Eq a => [a] -> [ListItem a]
 encodeModified [] = error "Cannot call encodeModified on an empty list."
 encodeModified [x] = [Single x]

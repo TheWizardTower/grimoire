@@ -14,8 +14,10 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
-  hs-source-dirs:      01-10, 11-20, 21-30
-  exposed-modules:     P01_GetLast
+  hs-source-dirs:      lib, 01-10, 11-20, 21-30
+  exposed-modules:     ListItem
+                     , NestedList
+                     , P01_GetLast
                      , P02_ButLast
                      , P03_KthElement
                      , P04_MyLength
@@ -38,8 +40,6 @@ library
                      , P21_InsertAt
                      , P22_Range
   build-depends:       base >= 4.7 && < 5
-                     , QuickCheck
-                     , HUnit
   default-language:    Haskell2010
 
 executable Haskell99Problems-exe
@@ -48,15 +48,14 @@ executable Haskell99Problems-exe
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
                      , Haskell99Problems
-                     , QuickCheck
-                     , HUnit
   default-language:    Haskell2010
 
 test-suite Haskell99Problems-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
   main-is:             Main.hs
-  other-modules:       P01_GetLast_Tests
+  other-modules:       TestLib
+                     , P01_GetLast_Tests
                      , P02_ButLast_Tests
                      , P03_KthElement_Tests
                      , P04_MyLength_Tests
@@ -67,13 +66,14 @@ test-suite Haskell99Problems-test
                      , P09_Pack_Tests
                      , P10_Encode_Tests
                      , P11_EncodeModified_Tests
+                     , P12_Decode_Tests
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
-  build-depends:       base
-                     , Haskell99Problems
+  build-depends:       Haskell99Problems
+                     , base
                      , tasty
-                     , tasty-hunit
-                     , tasty-smallcheck
-                     , tasty-quickcheck
+                     , tasty-hunit >= 0.9.2
+                     , tasty-quickcheck >= 0.8.4
+                     , tasty-smallcheck >= 0.8.0.1
   default-language:    Haskell2010
 
 source-repository head

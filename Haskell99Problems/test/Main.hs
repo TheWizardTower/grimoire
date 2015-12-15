@@ -9,10 +9,11 @@ import           P08_Compress_Tests
 import           P09_Pack_Tests
 import           P10_Encode_Tests
 import           P11_EncodeModified_Tests
+import           P12_Decode_Tests
 import           Test.Tasty
 import           Test.Tasty.HUnit
-import           Test.Tasty.QuickCheck as QC
-import           Test.Tasty.SmallCheck as SC
+import           Test.Tasty.QuickCheck    as QC
+import           Test.Tasty.SmallCheck    as SC
 
 
 main = defaultMain tests
@@ -31,4 +32,5 @@ tests = testGroup "All Tests"
             , packSuite
             , encodeSuite
             , encodeModifiedSuite
+            , decodeSuite
             ]
