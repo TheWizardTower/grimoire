@@ -46,3 +46,6 @@ stockEncodeDirect' n y (x:xs) | y == x    = stockEncodeDirect' (n+1) y xs
                         | otherwise = stockEncodeElement n y : (stockEncodeDirect' 1 x xs)
 stockEncodeElement 1 y = Single y
 stockEncodeElement n y = Multiple n y
+
+stockDupli :: [a] -> [a]
+stockDupli = concatMap (replicate 2)
