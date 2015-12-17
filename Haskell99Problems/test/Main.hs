@@ -14,6 +14,7 @@ import           P13_EncodeDirect_Tests
 import           P14_Dupli_Tests
 import           P15_Replicate_Tests
 import           P16_DropEvery_Tests
+import           P17_Split_Tests
 import           Test.Tasty
 
 
@@ -38,4 +39,5 @@ tests = testGroup "All Tests"
             , dupliSuite
             , replicateSuite
             , dropEverySuite
+            , splitSuite
             ]

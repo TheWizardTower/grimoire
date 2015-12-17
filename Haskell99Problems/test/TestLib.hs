@@ -62,3 +62,5 @@ stockDropEvery (x:xs) n = stockDropEvery' (x:xs) n 1 where
         ++ (stockDropEvery' xs n (i+1))
     stockDropEvery' [] _ _ = []
     divides x y = y `mod` x == 0
+
+stockSplit = flip splitAt
