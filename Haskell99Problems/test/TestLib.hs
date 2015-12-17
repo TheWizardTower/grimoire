@@ -37,3 +37,12 @@ stockDecodeModified = concatMap decodeHelper
     where
       decodeHelper (Single x)     = [x]
       decodeHelper (Multiple n x) = replicate n x
+
+stockEncodeDirect :: (Eq a) => [a] -> [ListItem a]
+stockEncodeDirect [] = []
+stockEncodeDirect (x:xs) = stockEncodeDirect' 1 x xs
+stockEncodeDirect' n y [] = [stockEncodeElement n y]
+stockEncodeDirect' n y (x:xs) | y == x    = stockEncodeDirect' (n+1) y xs
+                        | otherwise = stockEncodeElement n y : (stockEncodeDirect' 1 x xs)
+stockEncodeElement 1 y = Single y
+stockEncodeElement n y = Multiple n y

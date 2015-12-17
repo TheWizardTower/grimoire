@@ -10,14 +10,12 @@ import           P09_Pack_Tests
 import           P10_Encode_Tests
 import           P11_EncodeModified_Tests
 import           P12_Decode_Tests
+import           P13_EncodeDirect_Tests
 import           Test.Tasty
-import           Test.Tasty.HUnit
-import           Test.Tasty.QuickCheck    as QC
-import           Test.Tasty.SmallCheck    as SC
 
 
+main :: IO ()
 main = defaultMain tests
-
 
 tests :: TestTree
 tests = testGroup "All Tests"
@@ -33,4 +31,5 @@ tests = testGroup "All Tests"
             , encodeSuite
             , encodeModifiedSuite
             , decodeSuite
+            , encodeDirectSuite
             ]

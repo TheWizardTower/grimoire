@@ -67,6 +67,7 @@ test-suite Haskell99Problems-test
                      , P10_Encode_Tests
                      , P11_EncodeModified_Tests
                      , P12_Decode_Tests
+                     , P13_EncodeDirect_Tests
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       Haskell99Problems
                      , base
