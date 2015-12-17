@@ -52,3 +52,13 @@ stockDupli = concatMap (replicate 2)
 
 stockRepli :: [a] -> Int -> [a]
 stockRepli xs n = concatMap (replicate n) xs
+
+stockDropEvery :: [a] -> Int -> [a]
+stockDropEvery [] _ = []
+stockDropEvery (x:xs) n = stockDropEvery' (x:xs) n 1 where
+    stockDropEvery' (x:xs) n i = (if (n `divides` i) then
+        [] else
+        [x])
+        ++ (stockDropEvery' xs n (i+1))
+    stockDropEvery' [] _ _ = []
+    divides x y = y `mod` x == 0
