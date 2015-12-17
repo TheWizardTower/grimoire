@@ -49,3 +49,6 @@ stockEncodeElement n y = Multiple n y
 
 stockDupli :: [a] -> [a]
 stockDupli = concatMap (replicate 2)
+
+stockRepli :: [a] -> Int -> [a]
+stockRepli xs n = concatMap (replicate n) xs
