@@ -64,3 +64,5 @@ stockDropEvery (x:xs) n = stockDropEvery' (x:xs) n 1 where
     divides x y = y `mod` x == 0
 
 stockSplit = flip splitAt
+
+stockSlice xs i k | i>0 = take (k-i+1) $ drop (i-1) xs
