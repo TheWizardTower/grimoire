@@ -11,7 +11,7 @@ rotateSuite :: TestTree
 rotateSuite = testGroup "P19_Rotate Tests"
   [ testProperty "rotate is equivalent to stockRotate" $
     forAll (listOf1 arbitrarySizedIntegral) $ \(xs :: [Int]) ->
-    forAll (choose (0, length xs)) $ \i ->
+    forAll (choose (-1 * length xs, length xs)) $ \i ->
     rotate xs i == stockRotate xs i
   , testCase "Rotate test case 1 from 99 problems spec" $
     rotate "abcdefgh" 3 @=? "defghabc"

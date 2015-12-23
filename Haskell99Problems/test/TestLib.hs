@@ -69,7 +69,8 @@ stockSlice xs i k | i>0 = take (k-i+1) $ drop (i-1) xs
 stockRotate :: [a] -> Int -> [a]
 stockRotate [] _ = []
 stockRotate l 0 = l
-stockRotate (x:xs) n = stockRotate (xs ++ [x]) (n-1)
+stockRotate (x:xs) n | n > 0 = stockRotate (xs ++ [x]) (n-1)
+                     | n < 0 = stockRotate (last xs : x : init xs) (n+1)
 -- stockRotate l n = stockRotate l (length l + n)
 -- The above line actually causes an infinite loop. report.
 
