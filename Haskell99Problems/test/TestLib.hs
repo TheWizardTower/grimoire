@@ -3,8 +3,6 @@ module TestLib where
 import           Data.List
 import           ListItem
 import           NestedList
-import           Test.Tasty            (TestTree, testGroup)
-import           Test.Tasty.HUnit
 import           Test.Tasty.QuickCheck
 
 
@@ -18,12 +16,11 @@ flattenStock :: NestedList a -> [a]
 flattenStock (Elem x) = [x]
 flattenStock (List x) = concatMap flattenStock x
 
-
 stockCompress :: Eq a => [a] -> [a]
 stockCompress = map head . group
 
+stockEncode :: Eq a => [a] -> [(Int, a)]
 stockEncode xs = map (\x -> (length x, head x)) (group xs)
-
 
 stockEncodeModified :: Eq a => [a] -> [ListItem a]
 stockEncodeModified = map encodeHelper . stockEncode
@@ -63,6 +60,14 @@ stockDropEvery (x:xs) n = stockDropEvery' (x:xs) n 1 where
     stockDropEvery' [] _ _ = []
     divides x y = y `mod` x == 0
 
+stockSplit :: [a] -> Int -> ([a], [a])
 stockSplit = flip splitAt
 
+stockSlice :: [a] -> Int -> Int -> [a]
 stockSlice xs i k | i>0 = take (k-i+1) $ drop (i-1) xs
+
+stockRotate :: [a] -> Int -> [a]
+stockRotate [] _ = []
+stockRotate l 0 = l
+stockRotate (x:xs) (n) = stockRotate (xs ++ [x]) (n - 1)
+stockRotate l n = stockRotate l (length l + n)

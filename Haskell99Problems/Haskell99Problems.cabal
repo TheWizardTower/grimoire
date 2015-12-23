@@ -73,6 +73,7 @@ test-suite Haskell99Problems-test
                      , P16_DropEvery_Tests
                      , P17_Split_Tests
                      , P18_Slice_Tests
+                     , P19_Rotate_Tests
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       Haskell99Problems
                      , base
