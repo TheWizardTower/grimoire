@@ -69,5 +69,12 @@ stockSlice xs i k | i>0 = take (k-i+1) $ drop (i-1) xs
 stockRotate :: [a] -> Int -> [a]
 stockRotate [] _ = []
 stockRotate l 0 = l
-stockRotate (x:xs) (n) = stockRotate (xs ++ [x]) (n - 1)
-stockRotate l n = stockRotate l (length l + n)
+stockRotate (x:xs) n = stockRotate (xs ++ [x]) (n-1)
+-- stockRotate l n = stockRotate l (length l + n)
+-- The above line actually causes an infinite loop. report.
+
+stockRemoveAt :: Int -> [a] -> (a, [a])
+stockRemoveAt k xs = case back of
+        [] -> error "stockRemoveAt: index too large"
+        x:rest -> (x, front ++ rest)
+  where (front, back) = splitAt (k - 1) xs
