@@ -68,6 +68,7 @@ stockSlice xs i k | i>0 = take (k-i+1) $ drop (i-1) xs
 
 stockRotate :: [a] -> Int -> [a]
 stockRotate [] _ = []
+stockRotate [x] _ = [x]
 stockRotate l 0 = l
 stockRotate (x:xs) n | n > 0 = stockRotate (xs ++ [x]) (n-1)
                      | n < 0 = stockRotate (last xs : x : init xs) (n+1)
