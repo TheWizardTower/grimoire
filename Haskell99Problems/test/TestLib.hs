@@ -80,3 +80,9 @@ stockRemoveAt k xs = case back of
         [] -> error "stockRemoveAt: index too large"
         x:rest -> (x, front ++ rest)
   where (front, back) = splitAt (k - 1) xs
+
+stockInsertAt :: a -> [a] -> Int -> [a]
+stockInsertAt x xs n = let (ys,zs) = splitAt (n-1) xs  in ys++x:zs
+
+stockRange :: Int -> Int -> [Int]
+stockRange start end = [start..end]
