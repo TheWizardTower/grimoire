@@ -39,7 +39,9 @@ library
                      , P20_RemoveAt
                      , P21_InsertAt
                      , P22_Range
+                     , P23_Random
   build-depends:       base >= 4.7 && < 5
+                     , random >= 1.1
   default-language:    Haskell2010
 
 executable Haskell99Problems-exe
