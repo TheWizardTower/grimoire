@@ -42,6 +42,7 @@ library
                      , P23_Random
                      , P24_Lotto
                      , P25_Permute
+                     , P26_Combinations
                      , SelectElement
   build-depends:       base >= 4.7 && < 5
                      , random >= 1.1
